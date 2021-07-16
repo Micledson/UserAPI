@@ -16,3 +16,12 @@ func CreateUser(newUser Models.User) Models.User {
 	
 	return newUser
 }
+
+func GetUserByCPF(cpf string) *Models.User {
+	for _, user := range users {
+		if user.CPF == cpf {
+			return &user
+		}
+	}
+	return nil
+}
