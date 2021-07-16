@@ -10,3 +10,9 @@ var users []Models.User
 func GetUsers() []Models.User{
 	return users
 }
+
+func CreateUser(newUser Models.User) Models.User {
+	users = append(users, newUser)
+	
+	return newUser
+}
